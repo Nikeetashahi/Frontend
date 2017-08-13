@@ -1,0 +1,49 @@
+<div class="container" ng-controller="blogcontroller" style="margin-top:10px;">
+
+
+	  <div class="row" ng-init="bloglistadmin() ; hide = false">
+		<div class="col-md-8 col-md-offset-2" ng-repeat="blog in blogs">
+			<div class="panel panel-primary">
+				<div class="panel-heading" id="row2">
+			
+						<b>{{blog.blog_title}}</b> <span ng-click="hide = !hide"
+						class="pull-right clickable"><i
+						class="glyphicon glyphicon-chevron-down"></i></span>
+					
+				</div>
+
+
+				<div class="panel-body" id="row1" ng-show="hide">
+				   <div class="row">
+				      <div class="col-xs-12 col-sm-5">
+				
+				         {{blog.content}}
+				
+				</div>			
+				
+			 </div>										
+		   </div>
+
+					<div class="row" style="margin-left: 45%; margin-top: 10px;" ng-show="hide">
+						<button type="button" class="btn btn-success btn-md"
+							 ng-click="enable(blog.id)">Enable</button></div>
+							 
+							 
+							 
+							 
+							<div class="row" style="margin-top:6px;">
+					<div class="col-xs-12 col-md-12" style="text-align: right;">
+						<div class="panel-footer" ng-show="hide">
+
+
+							<b><i>Date</i></b> : {{blog.posted_on}} <b><i>Posted by</i></b> :
+							{{blog.posted_by}}
+						</div>
+
+					</div>
+
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>

@@ -1,0 +1,58 @@
+<div class="container" ng-controller="friendcontroller" id="listfrnd" style="margin-top:10px;">
+	<div class="row" ng-init="friendlist()">
+		
+		<div class="col-xs-12" ng-repeat="frnd in friends" style="margin: 10px;">
+		<div class="row">
+		<div class="col-sm-4">
+           <img src="http://localhost:8085/backend/getPic/{{frnd[0]}}/"  class="img-circle img-responsive" width="150px"  height="150px" />
+       	 </div>
+			
+			<div class="col-sm-4" style="color:white; margin-top:30px; font-size:25px;">
+				{{frnd[5]}}&nbsp{{ frnd[4] }}
+				
+			</div>
+			
+			<div class="col-sm-2" style="margin-top:30px;">
+				<button type="button" class="btn btn-success btn-md"
+							 ng-click="open(frnd)">About Friend</button></div>
+				
+			</div>
+			
+				
+		</div>	
+		</div>
+		
+		
+		<div ng-if=" modal " style="background:rgba(0,0,0,0.4); position:fixed;left:0;top:0;overflow-y:auto;width:100%;height:100%">
+			<div class="container" style="border:2px solid pink; margin-top:10%; padding:0.5px 0.5px 0px 0.5px;">
+			<div>
+				<button class="btn bn-md btn-danger pull-right" ng-click="close()">X</button>
+			</div>
+			<div><img src="http://localhost:8085/backend/getPic/{{modalfrnd[0]}}/" class="img-rounded img-responsive" width="150" height="100" style="border:2px groove blue;"></div>
+			<div class="panel-group" style="margin-top:5px;">
+				<div class="panel panel-info">
+     				 <div class="panel-heading">Name</div>
+     				 <div class="panel-body">{{modalfrnd[5]}}&nbsp{{ modalfrnd[4] }}</div>
+   				 </div>
+   				
+   				 <div class="panel panel-info">
+     				 <div class="panel-heading">Contact Number</div>
+     				 <div class="panel-body">{{modalfrnd[1]}}</div>
+   				 </div>
+   				 
+   				 <div class="panel panel-info">
+     				 <div class="panel-heading">Mail-id</div>
+     				 <div class="panel-body">{{ modalfrnd[0] }}</div>
+   				 </div>
+   				 
+   				 <div class="panel panel-info">
+     				 <div class="panel-heading">State</div>
+     				 <div class="panel-body">{{modalfrnd[2]}}</div>
+   				 </div>
+   				  -->
+   				 
+   			</div>
+				</div>
+			
+			</div>
+	</div>

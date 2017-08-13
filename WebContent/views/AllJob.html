@@ -1,0 +1,160 @@
+<div class="container" ng-controller="jobcontroller"
+	style="margin-top: 10px;">
+
+
+	<div class="row" ng-init="getAllJobs();  hide = false">
+		<div class="col-md-8 col-md-offset-2" ng-repeat="job in jobs">
+			<div class="panel panel-primary">
+				<div class="panel-heading" id="row2">
+
+					<strong>{{job.company_name}}</strong> <span
+						class="pull-right clickable" ng-click="hide = !hide"><i
+						class="glyphicon glyphicon-chevron-down"></i></span>
+				</div>
+
+
+				<div class="panel-body" id="row1" ng-show="hide">
+
+
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-5">
+							<span class="glyphicon glyphicon-map-marker"> :
+								{{job.location}}<br />
+							</span>
+						</div>
+						<div class="col-xs-12 col-sm-7" style="text-align: right;">
+							Title : {{job.title}}</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-5">
+							<span class="glyphicon glyphicon-briefcase"> :
+								{{job.experience}}</span>
+						</div>
+					</div>
+
+
+					<div class="row" style="margin-top: 10px;">
+						<div class="col-xs-12 col-sm-5">
+
+							<b><i>Skill</i></b> : {{job.skill_requirement}}
+
+						</div>
+					</div>
+
+
+					<div class="row" style="margin-top: 10px;">
+						<div class="col-xs-12 col-sm-5">
+
+							<b><i>Description</i></b> : {{ job.job_description}}
+						</div>
+					</div>
+
+					<div class="row" style="margin-top: 10px;">
+						<div class="col-xs-12 col-sm-5">
+
+							<b><i>Type</i></b> : {{job.jobtype}}
+						</div>
+					</div>
+
+
+
+					<!-- <div ng-if="user.role == 'admin'"></div> -->
+						<div class="row" style="margin-left: 45%; margin-top: 10px;">
+							<button type="button" class="btn btn-success btn-md"
+								ng-click="updatejobs(job)">Update</button>
+						</div>
+					
+				</div>
+
+				<div class="row" style="margin-top: 8px; color: black;">
+					<div class="col-xs-12 col-md-12" ng-show="hide"
+						style="text-align: right;">
+						<div class="panel-footer">
+							<b><i>Date</i></b> : {{job. posted_on}} <b><i>Posted by</i></b> :
+							{{job.posted_by}}
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div ng-if="modal"
+		style="background: rgba(0, 0, 0, 0.1); position: fixed; left: 0; top: 0; overflow-y: auto; width: 100%; height: 100%;">
+		<div class="container">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Update Job Form
+					<button class="btn bn-md btn-danger pull-right" ng-click="close()">X</button>
+				</div>
+				<div class="panel-body">
+					<form name="form" id="form_niki">
+						<div class="form-group">
+
+							<label>Job Title</label> <input type="text" name="title"
+								class="form-control" ng-model="details.title"
+								placeholder="Enter job title" required /> <span
+								ng-show="form.title.$dirty && form.title.$error.required">Title
+								is required</span><br> <label>Location</label> <input type="text"
+								name="location" class="form-control" ng-model="details.location"
+								placeholder="Enter job location" required /> <span
+								ng-show="form.location.$dirty && form.location.$error.required">Location
+								is required</span><br> <label>Company Name</label> <input
+								type="text" name="company_name" class="form-control"
+								ng-model="details.company_name" placeholder="Enter company name"
+								required /> <span
+								ng-show="form.company_name.$dirty && form.company_name.$error.required">Company
+								name is required</span><br> <label>Experience</label> <input
+								type="text" name="experience" class="form-control"
+								ng-model="details.experience" placeholder="Enter job experience"
+								required /> <span
+								ng-show="form.experience.$dirty && form.experience.$error.required">Experience
+								is required</span><br> <label>Skill Requirement</label> <input
+								type="text" name="skill_requirement" class="form-control"
+								ng-model="details.skill_requirement"
+								placeholder="Enter skill_requirement" required /> <span
+								ng-show="form.skill_requirement.$dirty && form.skill_requirement.$error.required">Skill
+								requirement is required</span><br> <label>Job Description</label>
+							<input type="text" name="job_description" class="form-control"
+								ng-model="details.job_description"
+								placeholder="Enter job_description" required /> <span
+								ng-show="form.job_description.$dirty && form.job_description.$error.required">Job
+								description is required</span><br> <label>Job Type</label> <input
+								type="text" name="jobtype" class="form-control"
+								ng-model="details.jobtype" placeholder="Enter type of job"
+								required /> <span
+								ng-show="form.jobtype.$dirty && form.jobtype.$error.required">Job
+								type is required</span><br> <label>Posted On</label> <input
+								type="date" name="posted_on" class="form-control"
+								ng-model="details.posted_on"
+								placeholder="Enter the date when job is posted" required /> <span
+								ng-show="form.posted_on.$dirty && form.posted_on.$error.required">Experience
+								is required</span>
+
+							<div class="form-actions">
+								<input type="submit" ng-click="updatejob(details)"
+									ng-disabled="form.$dirty && form.$invalid"
+									class="btn btn-primary" value="update" />
+							</div>
+
+						</div>
+					</form>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+

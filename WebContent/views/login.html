@@ -1,0 +1,29 @@
+<div class="col-md-6 col-md-offset-3" ng-controller="usercontroller">
+<img alt="login background" src="./Resource/image/background-pattern-design-28.jpg" id="lgg">
+	 <form name="login" ng-show="!isLogin" id="lg">
+	
+	 <h1 style="text-align:center;text-decoration:underline;margin-bottom:0;">
+       <strong>LOGIN</strong></h1>
+        <b style="color:black; font-size:25px;"><strong>Email: </strong></b><i class="glyphicon glyphicon-envelope" style="font-size:18px;"></i><input type= "email" class="form-control" name="email_id" id="control" placeholder="Enter UserId"  ng-model="user.email_id" required>
+        <span ng-show="login.email_id.$dirty && login.email_id.$error.required" style="color:red;">Email-id is required</span>
+        <span ng-show="login.email_id.$error.email_id" style="color:black;">Invalid email address.</span><br>
+        
+        <b style="color:black; font-size:25px;"><strong>Password: </strong></b><i class="glyphicon glyphicon-lock" style="font-size:18px;"></i><input type= "password" class="form-control" placeholder="Password" id="control" name="password" ng-maxlength="20" ng-minlength="7"  ng-model="user.password" required>
+        <span ng-show="login.password.$dirty && login.password.$error.required" style="color:red;"> password is required</span> 
+        <span ng-show="login.password.$error.email" style="color:black;">Invalid password</span>
+        <span ng-show="login.password.$error.minlength || login.password.$error.maxlength" style="color:red;">Password should be between 7 to 15 character</span>
+        
+        <div>
+        <input type="submit" ng-disabled="login.email_id.$dirty && login.email_id.$invalid ||  login.password.$dirty && login.password.$invalid"
+				class="btn btn-primary" value="Login" id="btn"  ng-click="log()"/></div>
+        </div>
+        </form>
+				
+
+		</div>
+		
+		
+		
+		
+
+

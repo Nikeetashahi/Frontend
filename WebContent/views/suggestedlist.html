@@ -1,0 +1,31 @@
+<div class="container" ng-controller="friendcontroller" >
+	<div class="row" ng-init="suggestlist()">
+		
+		
+		
+		
+		<div class="col-xs-12" ng-repeat="frnd in friends" id="listfrnd" style="margin: 10px;">
+          
+          <div class="row">
+            <div class="col-xs-4">	
+            	   <img src="http://localhost:8085/backend/getPic/{{frnd.email_id}}/"  class="img-circle img-responsive" width="100px"  height="70px" />
+       	
+       	 	</div>
+			
+			<div class="col-xs-12 col-sm-4" style="color:white; margin-top:30px; font-size:25px;">
+				{{frnd.name}}
+				
+			</div>
+			
+			<div class="col-xs-12 col-sm-3">
+				<button type="button" class="btn btn-success btn-md" style="margin-top:30px;"
+							 ng-click="addfrnd(frnd.email_id)">Add Friend</button>
+			</div>
+				
+		</div>
+			
+		</div>	
+		</div>	
+		
+</div>
+	

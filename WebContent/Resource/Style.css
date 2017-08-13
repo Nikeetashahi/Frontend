@@ -1,0 +1,211 @@
+h2{
+	
+	color:#DAF7A6;
+	font-style: italic;
+	text-align: center;
+	font-family:Courier;    
+	
+}
+
+label{
+	
+	color:aqua;
+	font-size:15px;  
+}
+
+.form-actions input[type="submit"]{
+   display: block;
+   background:blue;
+   color: black;
+   border: none;
+   padding: 10px 20px;
+   -moz-border-radius: 2px;
+   border-radius: 2px;
+   cursor: pointer;
+   margin-top:1%;
+   margin-left: 45%;
+ }
+ 
+ #form_niki
+ {
+ background: linear-gradient(to bottom right,black,grey);
+ color:aqua;
+ border:2px double #6D75F0;
+ font-family: Trebuchet MS;
+ padding-top: 30px;
+ padding-right: 25px;
+ padding-bottom: 20px;
+ padding-left: 25px;
+ 
+  }
+  
+  #c3{
+  text-align:center;
+  /*background: linear-gradient(to right,red  ,#3FE306 );*/
+  background:#0606E3;
+  border-bottom:double;
+  color:#888888;
+  font-size:30px;
+  font-weight:bold"
+  
+  
+  }
+  
+ #row1{
+ 
+  background: linear-gradient(to bottom right,#1107F0 ,#808087);
+  color:aqua;
+  border:2px double #6D75F0;
+  font-family: Trebuchet MS;
+ }
+ 
+ #row2{
+ background:#0606E3;
+  color:white;
+ }
+  .dropdown-menu
+{
+	 background: linear-gradient(to right, blue ,grey );
+	 border-left:3px solid grey;
+}
+
+.dropdown-menu>li>a{
+	color:white;
+	fint-weight:bold;
+}
+.dropdown-menu>li>a:hover{
+	background-color: #999999;
+	color:white;
+	border:1px solid;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover
+{
+	background-color:#566573;
+	border-radius:15%;
+	
+ 
+}
+
+#listfrnd{
+	
+	 border-collapse: collapse;
+	 background: linear-gradient(to bottom right,#1107F0 ,#808087);
+	 border-width:5px;  
+    border-left-style:outset;
+    border-color:black;
+}
+
+.design{ 
+      position:absolute;
+      left: 0%;
+      width:100%;
+      padding:0;
+      height: auto;
+ }
+ 
+ #pic{
+ 	 position:fixed;
+ 	 left:45%; 
+	 top:50% ; 
+	 text-align:center; 
+	 
+ 	 
+ }
+ 
+ #picture{
+ 	background-repeat:no-repeat;
+ 	width:100%;
+ 	position:absolute;
+   background-size:100%;
+ 
+ }
+ 
+ 
+ #lgg{ 
+ padding:0;
+      position:relative;
+      width:100%;
+      height: 350px;
+      margin-top:20%;
+      border-radius:25px;
+      
+  }
+ 
+ #lg{
+ 	position:absolute;
+ 	 left:20%; 
+	 top:28%; 
+	 
+ }
+ 
+ #control{
+ 	border: 2px solid #a1a1a1; 
+    background: #dddddd;
+    width: 400px;
+    height:40px;
+    border-radius: 25px;
+    padding:20px;
+ 	
+ } 
+ 
+ #btn {
+    width: 48%;
+    padding: 10px 18px;
+    margin-top:8%;
+    border-radius: 25px;
+    background-color:blue;
+    font-size:15px;
+    margin-left:101px;
+ }
+ 
+ #ph1{
+  color:black; 
+  width:30%;
+  margin-left:1.5%;
+  font-size:16px;
+ }
+ 
+ #d1{
+  margin-top:5%;
+  border-left-width:8px;
+  border-left-style:groove;
+  border-right-style:solid;
+  border-top-style:solid;
+  border-bottom-style:solid;
+  border-left-color:#909090;
+  border-right-width:5px;
+  border-top-width:5px;
+  border-bottom-width:5px;
+  border-radius:25px;
+  border-right-color:pink;
+  border-top-color:pink;
+  border-bottom-color:pink;
+ }
+ 
+ .inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.left-addon .glyphicon  { left:  0px;}
+
+.left-addon input  { padding-left:  30px; }
+
+          
+/*.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading span {
+	margin-top: -20px;
+	font-size: 15px;
+}*/
+
+
+	

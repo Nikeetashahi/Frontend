@@ -1,0 +1,30 @@
+<div class="container" ng-controller="friendcontroller" id="listfrnd" style="margin: 10px; border:2px solid pink;">
+	<div class="row" ng-init="pendinglist()">
+		
+		<div class="col-xs-12" ng-repeat="frnd in friends">
+		<div class="row">
+		<div class="col-md-3">
+          <img src="http://localhost:8085/backend/getPic/{{frnd[0]}}/"  class="img-circle img-responsive" width="100px"  height="50px" />
+       	 </div>
+			
+			<div class="col-md-3" style="color:white; margin-top:30px; font-size:25px;">
+				{{frnd[5]}}
+				
+			</div>
+			
+			<div class="col-md-2" style="margin-top:30px;">
+				<button type="button" class="btn btn-success btn-md"
+							 ng-click="accept(frnd[0],'Y' , frnd[5])">Accept</button></div>
+				
+			
+			
+			<div class="col-md-3" style="margin-top:30px;">
+				<button type="button" class="btn btn-success btn-md"
+							 ng-click="reject(frnd[0],'R')">Reject</button></div>
+				</div>
+			</div>		
+		</div>
+		
+	
+		</div>	
+	

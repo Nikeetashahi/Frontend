@@ -1,0 +1,36 @@
+<div class="container" ng-controller="blogcontroller">
+  <form name="myform">
+  <div class="col-xs-12 col-sm-12">
+  <div class="panel panel-primary" id="d1">
+    <h2 style="color:black; text-decoration: underline;"><b><strong>Blog Post Form</b></h2></strong>
+  
+    <div class="panel-heading" id="ph1"><strong><i>Title:-</i></strong>
+	 <textarea name="blog_title" ng-model=blog.blog_title style="width:90%;" required></textarea>				
+   
+    <span ng-show="myform.blog_title.$dirty && myform.blog_title.$error.required">Title is required</span><br>
+    </div>
+    <div class="panel-body">
+    <textarea style="width:100%;" rows="12" name="content" ng-model="blog.content" id="row1" required></textarea>
+    <span ng-show="myform.content.$dirty && myform.content.$error.required">content is required</span><br>
+    
+    
+     <div class="form-actions">
+			<input type="submit" ng-click="postblog()" ng-disabled="myform.$dirty && myform.$invalid" class="btn btn-primary btn-md" value="Post Blog"/></div>
+            
+   	
+   </div>
+    </div>
+  </div>
+   </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
